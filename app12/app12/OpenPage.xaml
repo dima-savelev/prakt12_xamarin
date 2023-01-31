@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app12.OpenPage" Title="Просмотр">
+    <ContentPage.Content>
+        <StackLayout  Margin="10,10,10,0">
+            <Label Text="ФИО"></Label>
+            <Entry x:Name="fioText" Text="{Binding Path=FIO}" IsReadOnly="True"></Entry>
+            <Label Text="Улица"></Label>
+            <Entry x:Name="streetText" Text="{Binding Path=Street}" IsReadOnly="True"></Entry>
+            <Label Text="Дом"></Label>
+            <Entry x:Name="houseText" Text="{Binding Path=House}" IsReadOnly="True"></Entry>
+            <Label Text="Квартира"></Label>
+            <Entry x:Name="flatText" Text="{Binding Path=Flat}" IsReadOnly="True"></Entry>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app12.EditPage" Title="Изменить">
+    <ContentPage.Content>
+        <StackLayout Margin="10,10,10,0">
+            <Label Text="ФИО"></Label>
+            <Entry x:Name="fioText" Text="{Binding Path=FIO}"></Entry>
+            <Label Text="Улица"></Label>
+            <Entry x:Name="streetText" Text="{Binding Path=Street}"></Entry>
+            <Label Text="Дом"></Label>
+            <Entry x:Name="houseText" Text="{Binding Path=House}"></Entry>
+            <Label Text="Квартира"></Label>
+            <Entry x:Name="flatText" Text="{Binding Path=Flat}"></Entry>
+            <Button Text="Изменить" Clicked="Edit_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

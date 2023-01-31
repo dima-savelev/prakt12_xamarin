@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="app12.MainPage" Title="Главная страница">
+
+    <StackLayout>
+        <Frame>
+            <Label x:Name="SelectedText" Text=""  HorizontalTextAlignment="Center" FontSize="23"></Label>
+        </Frame>
+        <ListView x:Name="StudentList" HasUnevenRows="True" ItemSelected="StudentList_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding FIO}" FontSize="18" Margin="20,20,20,20"></Label>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button Clicked="Open_Clicked" Text="Открыть" Grid.Column="0" Grid.Row="0" Margin="10,0,0,0"></Button>
+            <Button Clicked="Add_Clicked" Text="Добавить" Grid.Column="1" Grid.Row="0" Margin="0,0,10,0"></Button>
+            <Button Clicked="Edit_Clicked" Text="Изменить" Grid.Column="0" Grid.Row="1" Margin="10,0,0,0"></Button>
+            <Button Clicked="Remove_Clicked" Text="Удалить" Grid.Column="1" Grid.Row="1" Margin="0,0,10,0"></Button>
+            <Entry x:Name="streetText"  Grid.ColumnSpan="2" Grid.Row="2" Placeholder="Введите улицу"  Margin="10,0,10,0"></Entry>
+            <Button Clicked="Count_Clicked" Text="Найти" Grid.ColumnSpan="2" Grid.Row="3" Margin="10,0,10,0"></Button>
+            <Label Text="Кол-во студентов:" Grid.ColumnSpan="2" Grid.Row="4" FontSize="18" Margin="10,0,0,0" x:Name="countText"></Label>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
